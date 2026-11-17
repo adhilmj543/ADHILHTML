@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM and Event Handling</title>
+        <script>
+    function changeBackground(){
+        document.body.style.backgroundColor="rgb(56,65,85)";
+    }
+    function changeText(){
+        document.getElementById("message").innerHTML="Mouse is over the text!";
+    }
+    function restoreText(){
+        document.getElementById("message").innerHTML="Mouse the mouse over this text";
+    }
+    function changeImage(){
+        document.getElementById("collegeImage").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThzdXywwboI6TWmn7MVMbtBj6Y10OvR9c-RDEvqm81-w&s=10";
+
+    }
+    function restoreImage(){
+        document.getElementById("collegeImage").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSIgQ5x_WsuH3yN8HCVVHFdX1sbPTnP0uy5MPvD2XmJA&s=10";
+
+    }
+</script>
+</head>
+<body>
+    <h1>DOM and Event Handling</h1>
+    <button onclick="changeBackground()">change Background</button>
+    <br><br>
+    <h2 id="message" onmouseover="changeText()" onmouseout="restoreText()">Mouse the mouse over this text</h2>
+<img id="collegeImage"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSIgQ5x_WsuH3yN8HCVVHFdX1sbPTnP0uy5MPvD2XmJA&s=10" width="300" onmouseover="changeImage()" onmouseout="restoreImage()">
+</body>
+</html>
